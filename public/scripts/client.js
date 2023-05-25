@@ -128,7 +128,7 @@ $(document).ready(function () {
   function loadTweets() {
     $.ajax('/tweets', { method: 'GET' })
       .then(function (data) {
-        console.log('Success: ', data);
+        // console.log('Success: ', data);
         renderTweets(data);;
       });
   }
@@ -163,8 +163,10 @@ $(document).ready(function () {
         method: 'POST',
         data: data
       }).then(function(){
+        $('output').html('140');
         loadTweets();
         $('#tweet-text').val('');
+        
       }
       )
      
