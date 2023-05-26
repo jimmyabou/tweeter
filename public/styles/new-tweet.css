@@ -1,7 +1,7 @@
 
 
 .container{
-  display:flex;
+  margin-top: 2em;
   width:70%;
   display:flex;
   flex-direction: column;
@@ -10,11 +10,9 @@
 }
 
 textarea{
-  
   width:100%;
   border: none;
   border-bottom: 5px solid black;
-  height: 50px;
   resize: none;
   background-color: transparent;
 }
@@ -27,8 +25,11 @@ textarea{
   font-family: 'Bungee', sans-serif;
 }
 .tweet{
+  display:flex;
+  flex-direction: column;
   margin-top: 2em;
   border: 5px solid black;
+  min-width: 500px;
 }
 article header{
   
@@ -36,8 +37,10 @@ article header{
   height:5em;
   display: inline-flex;
   justify-content: space-between;
+  align-items: center;
   flex-direction: row;
   padding: 0 20px;
+  
 }
 .tweet:hover {
   box-shadow: 6px 6px rgba(0, 0, 0, 0.3);
@@ -49,6 +52,7 @@ i:hover{
 .person{
     display: inline-flex;
     align-items: center;
+    
   }
 
 .content{
@@ -61,4 +65,21 @@ article footer{
   justify-content:space-between;
   padding:0 0.5em;
 }
+#section img{
+  padding-right:0.5em;
+}
 
+#error {
+  height: 3em;
+  display:flex;
+  flex-direction: row;
+  align-content: center;
+  margin-top: 1em;
+  border: 5px solid red;
+  padding:0.5em;
+  margin-bottom: 1em;
+}
+#error div{
+  padding: 0 2em;
+  color: red;
+}

@@ -3,29 +3,21 @@ nav {
   width: 100%;
   background-color: #4056A1;
   color: #FFFFFF;
-  padding: 0 1.5em;
-  position: fixed;
   top: 0;
   position: fixed;
   display:flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  /* box-sizing: border-box; */
+  padding: 0 20px;
 }
 nav span {
   font-family: 'Bungee', sans-serif;
-  padding: 20px;
+  font-size: xx-large;
  
 }
-/* 
-.parent{
- 
-} */
+
 .tweetMenu{
   display:flex;
   flex-direction: column;
 }
-/* flex-direction: row-reverse;
-justify-content: center;
-align-items: flex-end; */

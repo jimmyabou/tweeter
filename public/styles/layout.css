@@ -6,13 +6,12 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
-
-/*
- * Global layout stuff
- */
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
@@ -21,18 +20,45 @@ body {
   font-size: 24px;
   display: flex;
   justify-content: center;
-  /* align-content: center; */
   align-items: center;
   flex-direction: column;
-  /* flex-wrap: wrap; */
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
- main{
-  /* align-content: center; */
-  width:90%;
-  text-align: center;
+main {
+  width: 90%;
   margin-top: auto;
- }
+}
+
+
+/* desktop Styles */
+@media only screen and (min-width: 1024px) {
+  body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #545149;
+    background-color: #f4f1ec;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    margin-top: 10vw;
+  }
+
+  .header {
+    width: 50%;
+    margin: 2vw;
+    margin-top: 4vw;
+    padding:2vw;
+  }
+}
+/* mobile Style */
+@media only screen and (max-width: 1024px) {
+  .header {
+    height: 500px;
+    width: 100%;
+  }
+
+}

@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <!-- Meta Information -->
   <title>Tweeter - Home Page</title>
-
   <!-- External CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     type="text/css" />
-
-  <!-- font-family: 'Bungee', cursive;
-font-family: 'Source Sans Pro', sans-serif; -->
-  <!-- bungee font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@1,300;1,600&display=swap"
@@ -28,13 +22,14 @@ font-family: 'Source Sans Pro', sans-serif; -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <!-- App JS -->
-  <script type="text/javascript" src="/scripts/client.js"></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+  <script type="text/javascript" src="/scripts/client.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 </head>
-
 <body>
-  <!-- <h1>test</h1> -->
-  <!-- Top nav bar (fixed) -->
   <nav>
     <div><span>tweeter</span></div>
     <div class="tweetMenu">
@@ -42,22 +37,19 @@ font-family: 'Source Sans Pro', sans-serif; -->
       <i class="fa-solid fa-angles-down"></i>
     </div>
   </nav>
-  <header>
-    <div id="div-two">
-      <img src="/images/profile-hex.png">
+  <header class="header">
+    <div id="logo">
+      <img src="/images/owl.png">
     </div>
     <br>
     <div>
-      <h2>Your Name</h2>
+      <p id="name"><strong>Jamil</strong> AD</p>
     </div>
   </header>
-  <!-- Page-specific (main) content here -->
-  <main class="container">
+  <main class="container" id="tweets-container">
     <section>
-      <h2>Compose Tweet</h2>
-      <form action="/tweets" method="POST">
+      <form action="/tweets" method="POST" id="form-tweet">
         <div class="box">
-          <!-- <label for="tweet-text">What are you humming about?</label> -->
           <div><textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea></div>
           <div class="button">
             <button type="submit">Tweet</button>
@@ -66,39 +58,10 @@ font-family: 'Source Sans Pro', sans-serif; -->
         </div>
       </form>
     </section>
-
-    <article class="tweet">
-      <header>
-        <div class="person">
-          <img src="https://i.imgur.com/v0JXau2.png">
-          <p>"Cora Bolognesi"</p>
-        </div>
-        <div>
-          <p>"@Bolognesi"</p>
-        </div>
-      </header>
-
-      <div class="content">
-        <p>
-          "If I have seen further it is by standing on the shoulders of giants"
-        </p>
-      </div>
-
-      <footer>
-        <div>Date</div>
-        <div>
-          <i class="fa-solid fa-flag"></i>
-          <i class="fa-solid fa-retweet"></i>
-          <i class="fa-solid fa-heart"></i>
-        </div>
-
-      </footer>
-    </article>
-
+    <section id="section">
+      <!-- the tweets are populated in this section  -->
+    </section>
   </main>
 </body>
 
 </html>
-
-
-<!-- placeholder="What are you humming about?" -->
