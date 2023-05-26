@@ -3,6 +3,7 @@
 Tweeter is a simple, single-page Twitter clone.
 
 This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+start App : npm start local
 
 ## Getting Started
 
@@ -14,5 +15,15 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Dependencies
 
-- Express
 - Node 5.10.x or above
+- body-parser": "^1.20.2",
+- chance: "^1.0.2",
+- express": "^4.13.4",
+- md5": "^2.1.0"
+![desktop display](https://github.com/jimmyabou/tweeter/blob/master/docs/Desktop%20display.png?raw=true)
+![mobile display](https://github.com/jimmyabou/tweeter/assets/128553101/f3c8485d-384c-4c0e-8669-db750aaf53a3)
+
+![tweet display](https://github.com/jimmyabou/tweeter/blob/master/docs/tweet-display-icon-date.png?raw=true)
+![no input error](https://github.com/jimmyabou/tweeter/blob/master/docs/empty-text-error.png?raw=true)
+![exceed character limit](https://github.com/jimmyabou/tweeter/blob/master/docs/exceed-text-limit.png?raw=true)
+
