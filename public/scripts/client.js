@@ -48,18 +48,17 @@ const createTweetElement = function (object) {
 };
 
 $(document).ready(function () {
-
+  const $container=$('#section').empty();
   const renderTweets = function (tweets) {
     for (let tweet of tweets) {
-      $('#section').prepend(createTweetElement(tweet));
+      $container.prepend(createTweetElement(tweet));
     }
 
   };
   function loadTweets() {
     $.get('/tweets')
       .then(function (data) {
-        $('#tweet-text').val('');
-        $('#section').empty();
+        
         renderTweets(data);
       });
   }
@@ -85,7 +84,8 @@ $(document).ready(function () {
         data: data
       }).then(function () {
         $('output').html('140');
-        
+        $('#section').empty();
+        $('#tweet-text').val('');
         loadTweets();
         
 

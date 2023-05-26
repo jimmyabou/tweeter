@@ -56,6 +56,8 @@ i:hover{
 .content{
   border-bottom: 5px solid black;
   margin: 0.5em;
+  overflow-wrap: break-word;
+  
 }
 article footer{
   margin-bottom: 0.5em;
@@ -84,3 +86,10 @@ article footer{
 .form-red{
   color: red;
 }
+/* p{
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+} */
