@@ -4,16 +4,14 @@ const escape = function (str) {
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
-const error=function(error){
-  const $error=$(`<section id="error">
+const error = function (error) {
+  const $error = $(`<section id="error">
   <i class="fa-solid fa-triangle-exclamation" style="color: #ff0000;"></i>
   <div>${error}</div>
   <i class="fa-solid fa-triangle-exclamation" style="color: #ff0000;"></i>
 </section>`);
-return $error;
-
+  return $error;
 }
-
 const createTweetElement = function (object) {
   let time = timeago.format(object.created_at);
 
@@ -55,7 +53,7 @@ $(document).ready(function () {
     for (let tweet of tweets) {
       $('#section').prepend(createTweetElement(tweet));
     }
-  
+
   };
   function loadTweets() {
     $.ajax('/tweets', { method: 'GET' })
@@ -69,36 +67,29 @@ $(document).ready(function () {
     const inputLength = $("#tweet-text").val().length;
     $('#tweets-container').find('#error').remove();
     if (inputLength === 0) {
-      
-      const text="No Input"
+      const text = "No Input"
       $('#tweets-container').prepend(error(text));
     }
-    else if (inputLength > 140){
-      const text=" Input exceeds length"
+    else if (inputLength > 140) {
+      const text = " Input exceeds length"
       $('#tweets-container').prepend(error(text));
     } else {
       const data = $('form').serialize();
-      
+
       console.log(data);
       $.ajax({
         url: 'http://localhost:8080/tweets',
         method: 'POST',
         data: data
-      }).then(function(){
+      }).then(function () {
         $('output').html('140');
 
         $('#section').empty();
         loadTweets();
         $('#tweet-text').val('');
-        
-      }
-      )
-     
+
+      })
     }
-    
   });
-
-
   loadTweets();
-}
-);
+});
