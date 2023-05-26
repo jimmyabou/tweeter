@@ -56,9 +56,11 @@ $(document).ready(function () {
 
   };
   function loadTweets() {
-    $.ajax('/tweets', { method: 'GET' })
+    $.get('/tweets')
       .then(function (data) {
-        renderTweets(data);;
+        $('#tweet-text').val('');
+        $('#section').empty();
+        renderTweets(data);
       });
   }
 
@@ -83,10 +85,9 @@ $(document).ready(function () {
         data: data
       }).then(function () {
         $('output').html('140');
-
-        $('#section').empty();
+        
         loadTweets();
-        $('#tweet-text').val('');
+        
 
       })
     }
