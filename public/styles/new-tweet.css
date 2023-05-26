@@ -29,13 +29,11 @@ textarea{
   flex-direction: column;
   margin-top: 2em;
   border: 5px solid black;
-  min-width: 500px;
+  /* min-width: 500px; */
 }
 article header{
   
   background-color: transparent;
-  height:5em;
-  display: inline-flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;

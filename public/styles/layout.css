@@ -44,21 +44,41 @@ main {
     justify-content: center;
     align-items: flex-start;
     flex-direction: row;
-    margin-top: 10vw;
+    margin-top: 7vw;
   }
 
   .header {
-    width: 50%;
+    width: 40%;
     margin: 2vw;
     margin-top: 4vw;
     padding:2vw;
   }
+  .tweet{
+    width: 95%; 
+  }
+  article header{
+    height:5em;
+    display: inline-flex;
+  }
+  .box{
+    width:95%;
+  }
 }
 /* mobile Style */
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+  .header {
+    height: 500px;
+    width: 100%;
+    
+  }
+  .tweet{
+    min-width: 500px; 
+  }
+
+}
+@media only screen and (max-width: 768px){
   .header {
     height: 500px;
     width: 100%;
   }
-
 }
