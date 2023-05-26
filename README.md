@@ -21,8 +21,9 @@ start App : npm start local
 - express": "^4.13.4",
 - md5": "^2.1.0"
 ![desktop display](https://github.com/jimmyabou/tweeter/blob/master/docs/Desktop%20display.png?raw=true)
-![mobile display](https://example.com/screenshot.png)
-![Screenshot](https://example.com/screenshot.png)
-![Screenshot](https://example.com/screenshot.png)
-![Screenshot](https://example.com/screenshot.png)
+![mobile display](https://github.com/jimmyabou/tweeter/assets/128553101/f3c8485d-384c-4c0e-8669-db750aaf53a3)
+
+![tweet display](https://github.com/jimmyabou/tweeter/blob/master/docs/tweet-display-icon-date.png?raw=true)
+![no input error](https://github.com/jimmyabou/tweeter/blob/master/docs/empty-text-error.png?raw=true)
+![exceed character limit](https://github.com/jimmyabou/tweeter/blob/master/docs/exceed-text-limit.png?raw=true)
 
