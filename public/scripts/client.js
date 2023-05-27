@@ -55,6 +55,13 @@ $(document).ready(function () {
     }
 
   };
+  //toggle menu
+  $('#form-tweet').hide();
+  $('#toggleIcon').click(function() {
+    $('#form-tweet').toggle();
+  });
+  
+  //toggle menu
   function loadTweets() {
     $.get('/tweets')
       .then(function (data) {
